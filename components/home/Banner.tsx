@@ -34,7 +34,7 @@ export default function Banner() {
       
       <div className="container relative mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="animate-fade-in">
-          <div className="inline-block bg-[var(--color-bg-highlight)] px-4 py-2 rounded-full text-[var(--color-accent)] font-medium text-sm mb-6">
+          <div className="inline-block bg-[var(--color-bg-secondary)] px-4 py-2 rounded-full text-[var(--color-accent)] font-medium text-sm mb-6">
             Full-stack Developer
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
