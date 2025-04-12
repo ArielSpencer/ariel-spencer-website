@@ -31,3 +31,28 @@ export default function Section({
     </section>
   );
 }
+
+interface SectionTitleProps {
+  title: string;
+  subtitle?: string;
+  centered?: boolean;
+  className?: string;
+}
+
+export function SectionTitle({ 
+  title, 
+  subtitle, 
+  centered = false,
+  className = '' 
+}: SectionTitleProps) {
+  return (
+    <div className={`mb-4 md:mb-6 ${centered ? 'text-center' : ''} ${className}`}>
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">{title}</h2>
+      {subtitle && (
+        <p className="text-base md:text-lg text-[var(--color-text-body)] max-w-2xl">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  );
+}
