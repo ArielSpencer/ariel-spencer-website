@@ -2,14 +2,9 @@
 
 import Image from 'next/image';
 import Section, { SectionTitle } from '../ui/Section';
+import Tag from '../ui/Tag';
 // import Button from '../ui/Button';
 // import { FiArrowRight } from 'react-icons/fi';
-
-const SkillBadge = ({ skill }: { skill: string }) => (
-  <div className="bg-white px-3 py-1.5 rounded-full text-sm shadow-sm border border-gray-100 hover:border-[var(--color-accent)] transition-colors">
-    {skill}
-  </div>
-);
 
 export default function AboutSummary() {
   const skillGroups = [
@@ -47,9 +42,9 @@ export default function AboutSummary() {
         </div>
         
         <div className="lg:col-span-6 lg:order-1 animate-fade-in">
-          <div className="inline-block bg-[var(--color-bg-secondary)] px-3 py-1 rounded-full text-[var(--color-accent)] font-medium text-sm mb-4">
+          <Tag variant="accent" size="sm" mb={4}>
             About Me
-          </div>
+          </Tag>
           
           <SectionTitle 
             title="Passionate about creating digital experiences"
@@ -84,10 +79,12 @@ export default function AboutSummary() {
             <div className="space-y-6">
               {skillGroups.map((group, index) => (
                 <div key={index}>
-                  <h4 className="text-sm font-medium text-[var(--color-accent)] mb-2">{group.title}</h4>
+                  <h4 className="text-sm font-medium text-[var(--color-accent)] mb-2">
+                    {group.title}
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     {group.skills.map((skill, skillIndex) => (
-                      <SkillBadge key={skillIndex} skill={skill} />
+                      <Tag variant='outline' size='md' hover key={skillIndex}>{skill}</Tag>
                     ))}
                   </div>
                 </div>

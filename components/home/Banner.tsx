@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Button from '../ui/Button';
+import Tag from '../ui/Tag';
 // import { FiArrowRight } from 'react-icons/fi';
 
 const PurpleText = ({ children }: { children: React.ReactNode }) => (
@@ -34,9 +35,9 @@ export default function Banner() {
       
       <div className="container relative mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="animate-fade-in">
-          <div className="inline-block bg-[var(--color-bg-secondary)] px-4 py-2 rounded-full text-[var(--color-accent)] font-medium text-sm mb-6">
+          <Tag variant="accent" size="md" mb={4}>
             Full-stack Developer
-          </div>
+          </Tag>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Hi, I&apos;m <PurpleText>Spencer</PurpleText>
           </h1>
